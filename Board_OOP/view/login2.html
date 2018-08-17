@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+<tr>
+<td id="hallo">
+아이디 <input type="text" id="id" name="id" >
+비밀번호 <input type="password" id="password" name="password" >
+<input type="button" value="login" onclick="ajax()">
+</td>
+</tr>
+</table>
+<script>
+  function ajax() {
+      var xmlhttp = new XMLHttpRequest();
+      xmlhttp.open("post","../controller/oopController.php");
+      xmlhttp.onreadystatechange = function () {
+        if(this.readyState==4 && this.status==200){
+            document.getElementById("hallo").innerHTML=xmlhttp.responseText;
+        }
+      };
+
+      var value='';
+      value +="id="+document.getElementById('id').value;
+      value +="&password="+document.getElementById('password').value;
+
+      xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+      xmlhttp.send(value);
+  }
+</script>
+</body>
+</html>

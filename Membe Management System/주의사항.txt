@@ -1,0 +1,11 @@
+dbConnect.php 파일에서 function안에 있는
+   $mysql_handler=mysqli_connect('localhost','root','autoset'); 과
+   mysqli_select_db($mysql_handler,'midtermexam');을 이부분 고치시면 됩니다.
+
+
+ 
+1. ? 회원등록 에러메시지 출력후 되돌아가는거 빼고는 구현하였습니다.
+2. ? alert창 출현 후 되돌아가는게 modify.html 파일로 돌아가지 않습니다. 
+     이거 빼고는 다 구현했습니다.
+3. ? alert창 출현 후 되돌아가는게 delete.html 파일로 돌아가지 않습니다. 
+     이거 빼고는 다 구현했습니다.

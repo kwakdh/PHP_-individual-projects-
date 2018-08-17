@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="inputBoard" method="post" action="../controller/con_input.php" onsubmit="return check()">
+    제목:<input type="text" width="40" name="subject"><br/>
+    <textarea name="contents" cols="40" rows="10"></textarea><br/>
+    <input type="submit" value="입력">
+</form>
+<script>
+    function check() {
+        if(inputBoard.subject.value==""){
+            alert("제목 입력 하세요 ");
+            inputBoard.subject.focus();
+            return false;
+        }
+   else  return true;
+    }
+
+</script>
+</body>
+</html>
